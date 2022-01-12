@@ -101,8 +101,10 @@
     .sec-nav {
       display: none;
     }
-    .sidebar, .back2top{
-      display:none;
+
+    .sidebar,
+    .back2top {
+      display: none;
     }
 
 
@@ -125,9 +127,10 @@
       .hamburger {
         display: none;
       }
-      .nav-m{
-         display: none;
-     
+
+      .nav-m {
+        display: none;
+
       }
 
       .link-groups {
@@ -231,47 +234,61 @@
         display: block;
       }
 
-     
-      .sidebar a{
-        color:#ee7d33;
-      }
-       .sidebar p:hover a{
-       text-decoration: none;
-       }
 
-      .sidebar p:hover ::before{
+      .sidebar a {
+        color: #ee7d33;
+      }
+
+      .sidebar p:hover a {
+        text-decoration: none;
+      }
+
+      .sidebar p:hover ::before {
         width: 10px;
         height: 10px;
-        border-radius:50%;
+        border-radius: 50%;
         content: "";
         display: inline-block;
         margin-right: 3px;
-        background-color:#212744;
+        background-color: #212744;
       }
 
-       .sidebar{
-       text-align: right;
-       position: fixed;
-       right:10px;
-       top:50%;
-       display: block;
-       }
-       .back2top{
-         width: 60px;
-         height:60px;
-         border-radius: 50%;
-         border:1px solid #ee7d33;
-         font-size: 1.5rem;
-         line-height:60px;
-         text-align: center;
-         margin-left: auto;
-         display: block;
-       }
-        
+      .sidebar {
+        text-align: right;
+        position: fixed;
+        right: 30px;
+        top: 50%;
+        display: block;
+      }
 
+      .back2top {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid #ee7d33;
+        font-size: 1.5rem;
+        line-height: 60px;
+        text-align: center;
+        margin-left: auto;
+        display: block;
+      }
+
+      .cards {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 1rem;
+
+      }
+
+      .teacherWrapper {
+        display: flex;
+      }
+
+   
 
 
     }
+      
 
     * {
       font-family: Roboto, sans-serif;
@@ -518,7 +535,7 @@
     #countdown ul {
       display: flex;
       padding-left: 0px;
-      margin: 0rem;
+      margin: 0px !important;
     }
 
     #countdown li {
@@ -779,12 +796,7 @@
       width: 100%;
     }
 
-    .cards {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 1rem;
 
-    }
 
     .solution-card {
       border: 1px solid black;
@@ -871,12 +883,7 @@
       font-size: 1.15rem;
     }
 
-    .checked {
-      display: flex;
-      font-size: 1.3rem;
-      line-height: 100%;
-      margin-bottom: 10px;
-    }
+
 
     .fa-check {
       margin-right: 10px;
@@ -888,21 +895,23 @@
     }
 
     .sticon {
-      max-width: 80px;
-      max-height: 80px;
+      width: 100%;
       border-radius: 50%;
       overflow: hidden;
     }
 
     .sticon img {
       width: 100%;
+
     }
 
     .stName {
       font-size: 1.2rem;
       letter-spacing: .125rem;
-      line-height: 400%;
       margin-left: 20px;
+      display: flex;
+      align-items: center;
+
     }
 
     .stFeedback {
@@ -1039,14 +1048,14 @@
       padding-top: 1.5rem;
     }
 
-    .question-btn{  
-      background-color:#ee7d33;
+    .question-btn {
+      background-color: #ee7d33;
       color: white;
       border: none;
       border-radius: 5px;
       width: 160px;
       height: 60px;
-      line-height:60px;
+      line-height: 60px;
       font-size: 1.2rem;
       cursor: pointer;
       text-align: center;
@@ -1124,7 +1133,12 @@
       bottom: 100px;
     }
 
-
+     .checked {
+     display: flex;
+     font-size: 1.3rem;
+     line-height: 1.2;
+     margin-bottom: 10px;
+     }
 
     .mainblue {
       background-color: rgb(33, 39, 68);
@@ -1176,11 +1190,11 @@
       right: 0;
       list-style-type: none;
       z-index: 100;
-      opacity: 0; 
+      opacity: 0;
       transition: .8s;
-      
+
     }
-    
+
 
     .nav-m ul {
       list-style-type: none;
@@ -1211,21 +1225,20 @@
     .link-groups-m li {
       padding-bottom: 15px;
     }
-    .login-cart-m li{
+
+    .login-cart-m li {
       padding-bottom: 10px;
-      
+
     }
-   
-    .show{
+
+    .show {
       opacity: 1;
       display: block;
     }
 
-    .back2top:hover{
+    .back2top:hover {
       transform: scale(1.1);
     }
- 
-
     
   </style>
 
@@ -1262,7 +1275,7 @@
     <p class="login">登入</p>
     <div class="cart-icon"><i class="fal fa-shopping-cart"> <span>0</span> </i></div>
   </div>
-  <div class="nav-m">
+   <div class="nav-m">
     <ul class="login-cart-m">
       <li>
         <span class="login-m">登入</span>
@@ -1302,7 +1315,7 @@
         </a></li>
       
     </ul>
-  </div>
+  </div> 
   <div class="moreInfo">
     <!-- <div class="cooperation">
       <ul>
@@ -1328,7 +1341,7 @@
       </div>
       <div class="course-left col-md-5">
         <div class="discount d-flex m-0">
-          <p class="col-2 p-0">銷售進度</p>
+          <p class="col-3 p-0">銷售進度</p>
           <p>確定開課！把握限時預購優惠</p>
         </div>
         <div class="progress orange"> <span class="progress-left"> <span class="progress-bar"></span> </span> <span
@@ -1362,10 +1375,14 @@
 
           <p class="price">$1,780 <span> 原價 $3,200</span></p>
           <div class="inputRadios">
-            <input type="radio" id="single" name="drone" value="single">
-            <label for="single" class="mr-2">單人優惠價 - $1,780</label>
-            <input type="radio" id="triple" name="drone" value="triple">
-            <label for="triple">三人合購 - $4,740</label>
+            <div>
+              <input type="radio" id="single" name="drone" value="single">
+              <label for="single" class="mr-2">單人優惠價 - $1,780</label>
+            </div>
+            <div>
+              <input type="radio" id="triple" name="drone" value="triple">
+              <label for="triple">三人合購 - $4,740</label>
+            </div>
           </div>
           <div class="buy-btn"><i class="fal fa-shopping-cart"></i> 加入購物車</div>
         </div>
@@ -1433,14 +1450,14 @@
         <img src="./imgs/solutionPic.jpg" alt="">
       </div>
       <div class="cards">
-        <div class="solution-card cardA col-4">
+        <div class="solution-card cardA col-md-4">
           <i class="fas fa-battery-quarter"></i>
           <p class="card-title">解惑你在製作過程中會遇到的卡關</p>
           <p>從近千張作品的經驗中，了解新手會踩到的雷，
             分享製作撇步，幫助你認識 PPT 的組合使用，
             進而提升產出效率。</p>
         </div>
-        <div class="solution-card cardB col-4">
+        <div class="solution-card cardB col-md-4">
           <i class="fas fa-battery-full"></i>
           <p class="card-title">三大招式掌握知識圖卡的製作技巧</p>
           <p>拆解知識圖卡製作的各項元素，結合理論與範例示意，
@@ -1580,7 +1597,7 @@
         <div class="sticon">
           <img src="./imgs/studentFeedback.png" alt="">
         </div>
-        <div class="stName">生涯設計師 • 蘊心</div>
+        <div class="stName col-8 col-md-11">生涯設計師 • 蘊心</div>
       </div>
       <div class="stFeedback">艾咪老師的課程很輕鬆，也容易了解，最棒的是，她講的內容讓我從不懂到懂，這是最重要的事了！</div>
     </div>
@@ -1589,7 +1606,7 @@
         <div class="sticon">
           <img src="./imgs/studentFeedback.png" alt="">
         </div>
-        <div class="stName">「暢談國文」美編 • 郁婷</div>
+        <div class="stName col-8 col-md-11">「暢談國文」美編 • 郁婷</div>
       </div>
       <div class="stFeedback">這門課真的是手把手教學，老師講解非常仔細，也很耐心為學員解答問題，讓你感受到滿滿的正向鼓勵。</div>
     </div>
@@ -1598,7 +1615,7 @@
         <div class="sticon">
           <img src="./imgs/studentFeedback.png" alt="">
         </div>
-        <div class="stName">佩居的談天療心室主理人 • 佩居</div>
+        <div class="stName col-8 col-md-11">佩居的談天療心室主理人 • 佩居</div>
       </div>
       <div class="stFeedback">抱著可以透過什麼方式把好書分享給更多人的疑問以及對圖卡製作的好奇來上課，發現課堂中學到的圖卡概念，甚至還可以運用到生活中！而且做圖卡好好玩，是會上癮的，我這幾天幾乎每天都在玩圖卡
         (笑) 。</div>
@@ -1608,7 +1625,7 @@
         <div class="sticon">
           <img src="./imgs/studentFeedback.png" alt="">
         </div>
-        <div class="stName">非營利組織專員 • 徐紘宸Sam</div>
+        <div class="stName col-8 col-md-11">非營利組織專員 • 徐紘宸Sam</div>
       </div>
       <div class="stFeedback">
         知識圖卡就像一張進入知識寶庫的門卡，這是一趟心法與技法兼具的解鎖之旅。你會從圖卡定位爬上製作邏輯脈絡，在色彩配置的山脈壯遊後，走進排版藝術的心流，最後在手把手的實作演練中，得到最接地氣的溫暖回饋。</div>
@@ -1618,7 +1635,7 @@
         <div class="sticon">
           <img src="./imgs/studentFeedback.png" alt="">
         </div>
-        <div class="stName">新北市光榮國中老師 • 劉彥伶</div>
+        <div class="stName col-8 col-md-11">新北市光榮國中老師 • 劉彥伶</div>
       </div>
       <div class="stFeedback">
         有艾咪老師的細心指導，讓我得以在知識圖卡的領空游刃有餘，接下來修行就在個人了！學習知識圖卡沒有捷徑，只有循序漸進加不間斷的實作練習，而我樂在其中，憑藉巧思靈活運用。</div>
@@ -1639,8 +1656,8 @@
   <div class="container" id="section5">
     <div class="courseIntroduceTitle">講師介紹</div>
 
-    <div class="teacherWrapper d-flex">
-      <div class="teacherProfile col-3">
+    <div class="teacherWrapper ">
+      <div class="teacherProfile col-md-3">
         <div class="teacher_avatar">
           <img src="./imgs/teacherAvatar.jpg" alt="">
         </div>
@@ -1649,7 +1666,7 @@
         </p>
 
       </div>
-      <div class="teacherIntroduce col-7">
+      <div class="teacherIntroduce col-md-7">
         <p>
           2020年2月接觸知識圖卡後，開啟了精彩的圖解旅程，迄今已製作30多套閱讀圖解，產出近千張吸睛知識圖卡。
           擅於化繁為簡，透過視覺化呈現，讓知識變得易讀好懂，同時也把書讀薄。
@@ -1997,9 +2014,7 @@
     <div class="courseIntroduceTitle">常見問題說明</div>
     <ul class="frequentQuestions">
       <li>課程使用問題：請見此<a href="" class="mainorange">連結</a>。</li>
-      <li>我什麼時候可以觀看課程？
-        預購期間購買：課程正式上線即可觀看課程，課程上線時會發送開課通知E-mail。
-        上線後購買：於購買完成後一個工作日內會開通。</li>
+      <li>我什麼時候可以觀看課程？預購期間購買：課程正式上線即可觀看課程，課程上線時會發送開課通知E-mail。上線後購買：於購買完成後一個工作日內會開通。</li>
     </ul>
   </div>
   <div class="sidebar">
@@ -2134,7 +2149,7 @@
       mm = String(today.getMonth() + 1).padStart(2, "0");
       yyyy = today.getFullYear();
       // console.log(yyyy)
-      dueday = "01/08/2022";
+      dueday = "01/15/2022";
 
       const countDown = new Date(dueday).getTime();
       // console.log(countDown)
@@ -2154,13 +2169,12 @@
   </script>
   <script>
     const hamtoggle = document.querySelector('.hamburger')
-    const mobileNav =document.querySelector('.nav-m')
-    
-    
-    hamtoggle.addEventListener('click',()=>{
-      mobileNav.classList.toggle('show');
-    } )
+    const mobileNav = document.querySelector('.nav-m')
 
+
+    hamtoggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('show');
+    })
   </script>
 
 
