@@ -107,6 +107,16 @@
       display: none;
     }
 
+    .show {
+    opacity: 1 !important;
+    z-index: 100;
+    display: block;
+    }
+    .nav-m{
+       opacity: 0;
+    }
+    
+
 
     @media (min-width: 768px) {
 
@@ -130,8 +140,10 @@
 
       .nav-m {
         display: none;
-
+       
+        
       }
+      
 
       .link-groups {
         display: flex;
@@ -283,9 +295,10 @@
       .teacherWrapper {
         display: flex;
       }
-
-   
-
+      .show {
+      display: none;
+      
+      }
 
     }
       
@@ -339,10 +352,6 @@
     .link-groups li:hover::after {
       width: 100%;
     }
-
-
-
-
 
     .cooperation ul {
       list-style-type: none;
@@ -1181,19 +1190,7 @@
       text-decoration: none;
     }
 
-    .nav-m {
-      width: 100%;
-      background-color: #8b8b8bea;
-      position: fixed;
-      height: 100vh;
-      top: 100px;
-      right: 0;
-      list-style-type: none;
-      z-index: 100;
-      opacity: 0;
-      transition: .8s;
-
-    }
+    
 
 
     .nav-m ul {
@@ -1231,10 +1228,20 @@
 
     }
 
-    .show {
-      opacity: 1;
-      display: block;
+    .nav-m {
+    width: 100%;
+    background-color: #8b8b8bea;
+    position: fixed;
+    height: 100vh;
+    top: 100px;
+    right: 0;
+    list-style-type: none;
+    transition: .8s;
+    
+
     }
+
+    
 
     .back2top:hover {
       transform: scale(1.1);
