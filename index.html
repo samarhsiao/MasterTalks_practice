@@ -116,6 +116,9 @@
     .nav-m {
       opacity: 0;
     }
+    .bgred{
+      background-color:red;
+    }
 
 
 
@@ -2132,17 +2135,6 @@
   </footer>
   <!-- Footer -->
 
-
-
-
-
-
-
-
-
-
-
-
   <script>
     (function () {
       const second = 1000,
@@ -2150,8 +2142,6 @@
         hour = minute * 60,
         day = hour * 24;
 
-      //I'm adding this section so I don't have to keep updating this pen every year :-)
-      //remove this if you don't need it
       let today = new Date(),
         dd = String(today.getDate()).padStart(2, "0");
       // console.log(dd)
@@ -2180,9 +2170,15 @@
     const hamtoggle = document.querySelector('.hamburger')
     const mobileNav = document.querySelector('.nav-m')
 
-
     hamtoggle.addEventListener('click', () => {
       mobileNav.classList.toggle('show');
+    })
+  </script>
+
+  <script>
+    const my_cartBtn = document.querySelector('.buy-btn')
+    my_cartBtn.addEventListener('touchstart',()=>{
+      my_cartBtn.classList.add('bgred')
     })
   </script>
 
